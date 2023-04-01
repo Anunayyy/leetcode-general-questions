@@ -4,8 +4,10 @@ public:
         if(s.length()<=1)return s;
         int n = s.length();
         int st=0;
-        int end=0;
+        //int end=0;
         int max_len=1;
+        
+        //first we check for odd length palindrome
         
         for(int i=0;i<n-1;i++){
             int l=i,r=i;
@@ -22,10 +24,11 @@ public:
             if(len>max_len){
                 max_len = len;
                 st = l+1;
-                end= r-1;
+                //end= r-1;
             }
             
         }
+        // now we check for even length palindrome
         for(int i=0;i<n;i++){
             int l=i,r=i+1;
             while(l>=0 and r<n){
@@ -39,7 +42,7 @@ public:
             if(len>max_len){
                 max_len = len;
                 st = l+1;
-                end= r-1;
+                //end= r-1;
         }
 
         
