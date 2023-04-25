@@ -16,7 +16,7 @@ class Solution
                 ans++,n--;
             if(n==0)
                 break;
-            n/=2,ans++;    
+            n=n/2,ans++;    
         }
         return ans;
     }
