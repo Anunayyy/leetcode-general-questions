@@ -18,22 +18,3 @@ for(int j=0;j<n;j++){
 if(set_row.count(i)>0 || set_col.count(j)>0) matrix[i][j]=0;
 }
 }
-}
-};
-//another approach
-/*
-class Solution {
-public:
-void setrow(vector<vector<int>>& matrix,int i,int n,int m){
-for(int j=0;j<n;j++){
-if(matrix[i][j]!=0){
-matrix[i][j]=-1;
-}
-}
-}
-void setcol(vector<vector<int>>& matrix,int n,int m,int j){
-for(int i=0;i<m;i++){
-if(matrix[i][j]!=0){
-matrix[i][j]=-1;
-}
-}
