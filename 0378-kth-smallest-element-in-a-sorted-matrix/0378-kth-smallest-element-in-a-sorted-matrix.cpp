@@ -13,3 +13,6 @@ public:
         
     }
 };
+
+/*
+here we add the elements to a max heap. it the size of the heap gets more than k then it pops the elments. at the end only k elements are present in the heap*/
