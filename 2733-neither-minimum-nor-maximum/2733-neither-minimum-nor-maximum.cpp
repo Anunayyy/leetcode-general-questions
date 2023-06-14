@@ -1,27 +1,18 @@
 class Solution {
 public:
     int findNonMinOrMax(vector<int>& nums) {
-        int n = nums.size();
-        
-        if(n<=2) return -1;
-        //vector
-        sort(nums.begin(),nums.end());
-        
-        return nums[n-2];
-        
-       /*riority_queue<int>pq;
+        if(nums.size()<=2) return -1;
+        int mn = 101;
+        int mx = 0;
         
         for(auto x:nums){
-            pq.push(x);
-            }
-        pq.pop();
-        
-        return pq.top();
-        */
-        
-        
-        
-        
+            mn = min(x,mn);
+            mx = max(x,mx);
+        }
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]!=mn and nums[i]!=mx) return nums[i];
+        }
+        return -1;
         
     }
 };
