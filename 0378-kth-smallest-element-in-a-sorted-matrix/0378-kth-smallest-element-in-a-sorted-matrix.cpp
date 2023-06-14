@@ -1,4 +1,4 @@
-/*class Solution {
+class Solution {
 public:
     int kthSmallest(vector<vector<int>>& matrix, int k) {
         priority_queue<int>pq;
@@ -13,11 +13,12 @@ public:
         
     }
 };
-*/
+
 /*
 here we add the elements to a max heap. it the size of the heap gets more than k then it pops the elments. at the end only k elements are present in the heap*/
 
 //using a vector
+/*
 class Solution {
 public:
         int kthSmallest(vector<vector<int>>& matrix, int k) {
@@ -31,5 +32,5 @@ public:
         sort(ans.begin(),ans.end());
         return ans[k-1];
     }
-};
+};*/
 
