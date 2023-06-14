@@ -5,11 +5,11 @@ public:
         
         if(n<=2) return -1;
         //vector
-        /*sort(nums.begin(),nums.end());
+        sort(nums.begin(),nums.end());
         
-        return nums[n-2];*/
+        return nums[n-2];
         
-        priority_queue<int>pq;
+       /*riority_queue<int>pq;
         
         for(auto x:nums){
             pq.push(x);
@@ -17,7 +17,7 @@ public:
         pq.pop();
         
         return pq.top();
-        
+        */
         
         
         
