@@ -1,4 +1,4 @@
-class Solution {
+/*class Solution {
 public:
       int uniquePaths(int m, int n) {
       int dp[m][n];
@@ -14,9 +14,9 @@ public:
         }
         return dp[m-1][n-1];
     }
-};
+};*/
 
-/*class Solution {
+class Solution {
 public:
     int solve(int m,int n,int r,int c,vector<vector<int>>& dp){
         if(r == m-1 || c == n-1)return 1;
@@ -29,4 +29,4 @@ public:
         vector<vector<int>> dp(m,vector<int>(n,0));
         return solve(m,n,0,0,dp);
     }
-};*/
+};
