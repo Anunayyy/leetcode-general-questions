@@ -1,27 +1,3 @@
-/*class Solution {
-public:
-    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
-        vector<int>res;
-        int n=nums.size();
-        if(n<k)return res.push_back(0);
-        if(n==k) res.push_back(max(nums.begin(),nums.end()));
-        for(int i=0;i+2<n;i++){
-            priority_queue<int> pq;
-            pq.push(nums[i]);
-            pq.push(nums[i+1]);
-            pq.push(nums[i+2]);
-            res.push_back(pq.top());
-            pq = priority_queue<int>();
-            
-            
-        }
-        return res;
-       
-        
-
-        
-    }
-};*/
 class Solution {
 public:
     vector<int> maxSlidingWindow(vector<int>& nums, int k) {
