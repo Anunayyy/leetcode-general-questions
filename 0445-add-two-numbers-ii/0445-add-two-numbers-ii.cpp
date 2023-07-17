@@ -11,7 +11,7 @@
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-    std::stack<int> stack1, stack2;
+    stack<int> stack1, stack2;
 
     // Push values from first linked list to stack1
     while (l1) {
