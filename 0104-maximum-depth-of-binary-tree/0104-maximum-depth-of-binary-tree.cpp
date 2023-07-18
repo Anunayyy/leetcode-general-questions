@@ -8,7 +8,7 @@
  *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
- */
+ *//*
 class Solution {
 public:
     void help(TreeNode* root,int level,vector<vector<int>>& res){
@@ -23,6 +23,17 @@ public:
         vector<vector<int>>res;
         help(root,0,res);
         return res.size();
+        
+    }
+};*/
+class Solution {
+public:
+    int maxDepth(TreeNode* root) {
+        if(root==NULL) return 0;
+        int l = maxDepth(root->left);
+        int r = maxDepth(root->right);
+        return 1+ max(l,r);
+        
         
     }
 };
