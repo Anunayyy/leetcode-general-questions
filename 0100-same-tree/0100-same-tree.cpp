@@ -10,7 +10,7 @@
  * };
  */
 class Solution {
-    
+    private:
     bool Check_Same_Tree(TreeNode* r1, TreeNode* r2) {
         // base case
         if(r1 == NULL && r2 == NULL)
