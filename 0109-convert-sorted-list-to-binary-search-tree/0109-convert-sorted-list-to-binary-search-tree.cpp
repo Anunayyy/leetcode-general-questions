@@ -22,34 +22,28 @@
 class Solution {
 public:
     TreeNode* sortedListToBST(ListNode* head) {
-    if (!head) {
-        return nullptr;
+        if(!head) return NULL;
+        
+        if(!head->next) return new TreeNode(head->val);
+        
+        ListNode* slow = head;
+        ListNode* fast = head;
+        ListNode* prev = nullptr;
+        
+        while(fast && fast->next){
+            prev=slow;
+            slow=slow->next;
+            fast=fast->next->next;
+        }
+        prev->next=nullptr;
+        
+        TreeNode* root= new TreeNode(slow->val);
+        
+        root->left = sortedListToBST(head);
+        root->right = sortedListToBST(slow->next);
+        
+        return root;
+        
+        
     }
-
-    if (!head->next) {
-        return new TreeNode(head->val);
-    }
-
-    // Find the middle of the linked list using slow and fast pointers
-    ListNode* slow = head;
-    ListNode* fast = head;
-    ListNode* prev = nullptr;
-    while (fast && fast->next) {
-        prev = slow;
-        slow = slow->next;
-        fast = fast->next->next;
-    }
-
-    // Disconnect the list at the middle element
-    prev->next = nullptr;
-
-    // Create the root node
-    TreeNode* root = new TreeNode(slow->val);
-
-    // Recursively build the left and right subtrees
-    root->left = sortedListToBST(head);
-    root->right = sortedListToBST(slow->next);
-
-    return root;
-}
 };
